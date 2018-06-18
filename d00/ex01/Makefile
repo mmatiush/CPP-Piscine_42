@@ -1,9 +1,17 @@
 # Name of the program
-NAME	:= megaphone
+NAME	:= phonebook
+
+# Directories
+OBJ_DIR	:= ./obj/
+SRC_DIR	:= ./src/
+INC_DIR := ./inc/
 
 # Source and object files
-SRC		:= megaphone.cpp
-OBJ		:= $(SRC:.cpp=.o)
+SRC		:= phonebook.cpp Contact.class.cpp
+OBJ		:= $(addprefix $(OBJ_DIR), $(SRC:.cpp=.o))
+
+# Header files
+INC	:= Contact.class.hpp
 
 # Compiler and flags
 CC		:= clang++
@@ -13,16 +21,20 @@ FLAGS	:= -Wall -Wextra -Werror
 all: $(NAME)
 
 # Link object files into the executable
-$(NAME): $(OBJ)
+$(NAME): obj_dir $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 # Compile object files from source files
-%.o: %.cpp
-	$(CC) $(FLAGS) -o $@ -c $<
+$(OBJ_DIR)%.o: $(SRC_DIR)%.cpp $(addprefix $(INC_DIR), $(INC))
+	$(CC) $(FLAGS) -o $@ -c $< -I$(INC_DIR)
+
+# Create a directory for object files
+obj_dir:
+	@mkdir -p $(OBJ_DIR)
 
 # Delete object files
 clean:
-	rm -f $(OBJ)
+	rm -rf $(OBJ_DIR)
 
 # Delete all files created with the Makefile
 fclean: clean
