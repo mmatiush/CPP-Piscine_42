@@ -15,7 +15,8 @@
 		"istream": "cpp",
 		"locale": "cpp",
 		"tuple": "cpp",
-		"utility": "cpp"
+		"utility": "cpp",
+		"ios": "cpp"
 	},
 	"C_Cpp.intelliSenseEngineFallback": "Disabled"
 }
