@@ -10,7 +10,12 @@
 		"typeinfo": "cpp",
 		"iosfwd": "cpp",
 		"iostream": "cpp",
-		"memory": "cpp"
+		"memory": "cpp",
+		"__functional_base": "cpp",
+		"istream": "cpp",
+		"locale": "cpp",
+		"tuple": "cpp",
+		"utility": "cpp"
 	},
 	"C_Cpp.intelliSenseEngineFallback": "Disabled"
 }

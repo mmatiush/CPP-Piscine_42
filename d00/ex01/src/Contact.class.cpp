@@ -11,7 +11,8 @@
 /* ************************************************************************** */
 
 #include <iostream>
-#include <Contact.class.hpp>
+#include <iomanip>
+#include "Contact.class.hpp"
 
 Contact::Contact(void) { return; }
 
@@ -51,10 +52,11 @@ void Contact::setContact() {
 	std::cout << "Tell your darkest secret" << std::endl;
 	if (!(std::getline(std::cin, this->_darkest_secret)))
 		exit (0);
-	std::cout << "New contact has been suceesfully added" << std::endl;
+	std::cout << "\tNew contact has been successfuly added" << std::endl;
 }
 
-void Contact::printContact(void) const {
+void Contact::printWholeContact(void) const {
+	std::cout << std::endl << "Your contact details:" << std::endl;
 	std::cout << "Last name:       " << this->_last_name << std::endl;
 	std::cout << "First name:      " << this->_first_name << std::endl;
 	std::cout << "Nickname:        " << this->_nickname << std::endl;
@@ -66,9 +68,23 @@ void Contact::printContact(void) const {
 	std::cout << "Favorite meal:   " << this->_underwear_color << std::endl;
 	std::cout << "Underwear color: " << this->_underwear_color << std::endl;
 	std::cout << "Darkest secret:  " << this->_darkest_secret << std::endl;
+	std::cout << std::endl;
 }
 
-void Contact::getContact() const {
-	std::cout << this->_birthday_date << std::endl;
+std::string Contact::getFirstName(void) const {
+	if (this->_first_name.size() >= MAX_WIDTH)
+		return (this->_first_name.substr(0, 9) + '.');
+	return (this->_first_name);
 }
 
+std::string Contact::getLastName(void) const {
+	if (this->_last_name.size() >= MAX_WIDTH)
+		return (this->_last_name.substr(0, 9) + '.');
+	return (this->_last_name);
+}
+
+std::string Contact::getNickname(void) const {
+	if (this->_nickname.size() >= MAX_WIDTH)
+		return (this->_nickname.substr(0, 9) + '.');
+	return (this->_nickname);
+}

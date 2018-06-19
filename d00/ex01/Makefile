@@ -18,10 +18,10 @@ CC		:= clang++
 FLAGS	:= -Wall -Wextra -Werror
 
 # Compile and link the program
-all: $(NAME)
+all: obj_dir $(NAME)
 
 # Link object files into the executable
-$(NAME): obj_dir $(OBJ)
+$(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 # Compile object files from source files

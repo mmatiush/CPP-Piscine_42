@@ -12,16 +12,18 @@
 
 #ifndef CONTACT_CLASS_HPP
 # define CONTACT_CLASS_HPP
-
+# define MAX_WIDTH 10
 # include <iostream>
 
 class Contact {
 public:
 	Contact(void);
 	~Contact(void);
-	void setContact(void) ;
-	void getContact(void) const;
-	void printContact(void) const;
+	void setContact(void);
+	void printWholeContact(void) const;
+	std::string getFirstName(void) const;
+	std::string getLastName(void) const;
+	std::string getNickname(void) const;
 private:
 	std::string _last_name;
 	std::string _first_name;
