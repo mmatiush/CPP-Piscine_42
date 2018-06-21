@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmatiush <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/19 21:10:34 by mmatiush          #+#    #+#             */
-/*   Updated: 2018/06/19 21:10:35 by mmatiush         ###   ########.fr       */
+/*   Created: 2018/06/20 15:55:31 by mmatiush          #+#    #+#             */
+/*   Updated: 2018/06/20 15:55:33 by mmatiush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Zombie.hpp"
-#include "ZombieHorde.hpp"
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
+# include "Weapon.hpp"
 
-int		main(void) {
-	std::srand(std::time(0));
-	ZombieHorde LALA(5);
-	LALA.announce();
-	return (0);
-}
+class HumanA {
+public:
+	HumanA(const std::string &, Weapon &);
+	~HumanA(void);
+	void attack(void) const;
+private:
+	std::string	_name;
+	Weapon		&_weapon;
+};
+
+#endif

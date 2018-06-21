@@ -15,6 +15,7 @@
 #include "ZombieEvent.hpp"
 
 int		main(void){
+	std::srand(std::time(0));
 	// Test Zombie class and announce
 	Zombie barathrum("Bara", "crazy");
 	barathrum.announce();

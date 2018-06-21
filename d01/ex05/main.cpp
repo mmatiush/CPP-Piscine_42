@@ -5,18 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmatiush <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/19 21:10:34 by mmatiush          #+#    #+#             */
-/*   Updated: 2018/06/19 21:10:35 by mmatiush         ###   ########.fr       */
+/*   Created: 2018/06/20 12:38:14 by mmatiush          #+#    #+#             */
+/*   Updated: 2018/06/20 12:38:18 by mmatiush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Zombie.hpp"
-#include "ZombieHorde.hpp"
+#include "Human.hpp"
+#include "Brain.hpp"
 
-int		main(void) {
-	std::srand(std::time(0));
-	ZombieHorde LALA(5);
-	LALA.announce();
-	return (0);
+int main()
+{
+	Human bob;
+	std::cout << bob.identify() << std::endl;
+	std::cout << bob.getBrain().identify() << std::endl;
 }

@@ -1,4 +1,10 @@
 {
+	"todohighlight.include": [
+		"**/*.hpp",
+		"**/*.h",
+		"**/*.cpp",
+		"**/*.c"
+	  ],
 	"files.associations": {
 		"__locale": "cpp",
 		"__config": "cpp",
@@ -16,7 +22,11 @@
 		"locale": "cpp",
 		"tuple": "cpp",
 		"utility": "cpp",
-		"ios": "cpp"
+		"ios": "cpp",
+		"sstream": "cpp",
+		"string": "cpp",
+		"__functional_03": "cpp",
+		"functional": "cpp"
 	},
 	"C_Cpp.intelliSenseEngineFallback": "Disabled"
 }

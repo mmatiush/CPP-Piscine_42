@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Human.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmatiush <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/19 21:10:34 by mmatiush          #+#    #+#             */
-/*   Updated: 2018/06/19 21:10:35 by mmatiush         ###   ########.fr       */
+/*   Created: 2018/06/20 12:37:45 by mmatiush          #+#    #+#             */
+/*   Updated: 2018/06/20 12:37:45 by mmatiush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Zombie.hpp"
-#include "ZombieHorde.hpp"
+#include "Human.hpp"
+#include "Brain.hpp"
 
-int		main(void) {
-	std::srand(std::time(0));
-	ZombieHorde LALA(5);
-	LALA.announce();
-	return (0);
+Human::Human(void) {
+	return ;
+}
+
+Human::~Human(void) {
+	return ;
+}
+
+std::string Human::identify(void) const {
+	return (_mozg.identify());
+}
+
+Brain Human::getBrain(void) const {
+	return (this->_mozg);
 }

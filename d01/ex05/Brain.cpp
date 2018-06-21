@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmatiush <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/19 21:10:34 by mmatiush          #+#    #+#             */
-/*   Updated: 2018/06/19 21:10:35 by mmatiush         ###   ########.fr       */
+/*   Created: 2018/06/20 12:37:33 by mmatiush          #+#    #+#             */
+/*   Updated: 2018/06/20 12:37:34 by mmatiush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Zombie.hpp"
-#include "ZombieHorde.hpp"
+#include "Brain.hpp"
 
-int		main(void) {
-	std::srand(std::time(0));
-	ZombieHorde LALA(5);
-	LALA.announce();
-	return (0);
+Brain::Brain (void) {
+	std::stringstream temp;
+	temp << this;
+	this->_address = temp.str();
+	return ;
+}
+
+Brain::~Brain (void) {
+	return ;
+}
+
+std::string Brain::identify(void) const {
+	return (this->_address);
 }

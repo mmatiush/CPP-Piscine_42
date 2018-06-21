@@ -23,7 +23,7 @@ Zombie* ZombieEvent::newZombie(std::string name) {
 }
 
 Zombie *ZombieEvent::randomChump(void) {
-	std::string names[] = {"Axe", "", "Earthshaker", "Juggernaut", "Morphling",
+	std::string names[] = {"Axe", "Big", "Earthshaker", "Juggernaut", "Morphling",
 						   "Butcher", "Lich", "Enigma", "Tinker", "Spectre"};
 	Zombie *temp = new Zombie(names[(rand() % 10)], this->_type);
 	temp->announce();

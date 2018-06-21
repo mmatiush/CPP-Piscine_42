@@ -5,18 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmatiush <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/19 21:10:34 by mmatiush          #+#    #+#             */
-/*   Updated: 2018/06/19 21:10:35 by mmatiush         ###   ########.fr       */
+/*   Created: 2018/06/21 16:35:24 by mmatiush          #+#    #+#             */
+/*   Updated: 2018/06/21 16:35:25 by mmatiush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Zombie.hpp"
-#include "ZombieHorde.hpp"
+#include "FragTrap.hpp"
 
 int		main(void) {
-	std::srand(std::time(0));
-	ZombieHorde LALA(5);
-	LALA.announce();
+	FragTrap bot("BOT");
+	// bot.rangedAttack("devchonka");
+	// bot.meleeAttack("BOKSER");
+	bot.takeDamage(50);
+	std::cout << bot.getHealth() << std::endl;
+	bot.beRepaired(120);
 	return (0);
 }

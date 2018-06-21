@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmatiush <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/19 21:10:34 by mmatiush          #+#    #+#             */
-/*   Updated: 2018/06/19 21:10:35 by mmatiush         ###   ########.fr       */
+/*   Created: 2018/06/20 15:55:26 by mmatiush          #+#    #+#             */
+/*   Updated: 2018/06/20 15:55:27 by mmatiush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "HumanA.hpp"
 #include <iostream>
-#include "Zombie.hpp"
-#include "ZombieHorde.hpp"
 
-int		main(void) {
-	std::srand(std::time(0));
-	ZombieHorde LALA(5);
-	LALA.announce();
-	return (0);
+HumanA::HumanA(const std::string &name, Weapon &weapon) : _name(name), _weapon(weapon) {
+	return ;
+}
+
+HumanA::~HumanA(void) {
+	return ;
+}
+
+void HumanA::attack(void) const {
+	std::cout << this->_name << " attacks with his " << this->_weapon.getType() << std::endl;
 }

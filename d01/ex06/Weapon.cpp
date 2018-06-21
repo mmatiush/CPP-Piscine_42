@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmatiush <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/19 21:10:34 by mmatiush          #+#    #+#             */
-/*   Updated: 2018/06/19 21:10:35 by mmatiush         ###   ########.fr       */
+/*   Created: 2018/06/20 15:55:52 by mmatiush          #+#    #+#             */
+/*   Updated: 2018/06/20 15:55:53 by mmatiush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Weapon.hpp"
 #include <iostream>
-#include "Zombie.hpp"
-#include "ZombieHorde.hpp"
 
-int		main(void) {
-	std::srand(std::time(0));
-	ZombieHorde LALA(5);
-	LALA.announce();
-	return (0);
+Weapon::Weapon(std::string type) : _type(type) {
+	return ;
+}
+
+Weapon::~Weapon(void) {
+	return ;
+}
+
+void Weapon::setType(const std::string &type) {
+	this->_type = type;
+}
+
+const std::string &Weapon::getType (void) const {
+	return (this->_type);
 }
