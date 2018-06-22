@@ -12,12 +12,13 @@
 
 #include <iostream>
 #include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
 int		main(void) {
 	std::srand(std::time(0));
-	FragTrap warrior("Warrior");
-	FragTrap civilian;
-	FragTrap looser(warrior);
+	ScavTrap warrior("Warrior");
+	ScavTrap civilian;
+	ScavTrap looser(warrior);
 
 	std::cout << std::endl << "\tTesting copy and equals operator:" << std::endl << std::endl;
 	civilian = warrior;
@@ -34,13 +35,13 @@ int		main(void) {
 	
 	warrior.setName("Warrior");
 	std::cout << std::endl << "\tTesting random attaks:" << std::endl << std::endl;
-	warrior.vaulthunter_dot_exe("Lilith");
-	warrior.vaulthunter_dot_exe("Scorpio");
-	warrior.vaulthunter_dot_exe("Brick");
-	warrior.vaulthunter_dot_exe("Siren");
-	warrior.vaulthunter_dot_exe("Maya");
+	warrior.challengeNewcomer("Lilith");
+	warrior.challengeNewcomer("Scorpio");
+	warrior.challengeNewcomer("Brick");
+	warrior.challengeNewcomer("Siren");
+	warrior.challengeNewcomer("Maya");
 	warrior.refreshEnergy();
-	warrior.vaulthunter_dot_exe("Maya");
+	warrior.challengeNewcomer("Maya");
 
 	std::cout << std::endl << "\tTesting mele and range attacks" << std::endl << std::endl;
 	warrior.rangedAttack("Athena");

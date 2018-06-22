@@ -1,8 +1,8 @@
 # Name of the program
-NAME	:= ex00
+NAME	:= ex01
 
 # Source and object files
-SRC		:= main.cpp FragTrap.cpp
+SRC		:= main.cpp ScavTrap.cpp FragTrap.cpp
 
 # Compiler and flags
 CC		:= clang++

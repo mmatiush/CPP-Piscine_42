@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmatiush <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,19 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 #include <iostream>
 
-class FragTrap {
+class ScavTrap {
 
 public:
 
-	FragTrap( void );
-	FragTrap( std::string const & );
-	FragTrap( FragTrap const & src );
-	FragTrap & operator=( FragTrap const & rhs );
-	~FragTrap( void );
+	ScavTrap( void );
+	ScavTrap( std::string const & );
+	ScavTrap( ScavTrap const & src );
+	ScavTrap & operator=( ScavTrap const & rhs );
+	~ScavTrap( void );
 
 	void	setName( std::string const & );
 	std::string getName( void ) const;
@@ -34,13 +34,14 @@ public:
 	void	meleeAttack( std::string const & );
 	void	takeDamage( unsigned int );
 	void	beRepaired( unsigned int );
-	void	refreshEnergy ( void );
-	void	vaulthunter_dot_exe( std::string const & );
-	void	attackGrenade ( std::string const & );
-	void	attackFreeze ( std::string const & );
-	void	attackFire ( std::string const & );
-	void	attackShotgun ( std::string const & );
-	void	attackSniperRifle ( std::string const & );
+	void	refreshEnergy( void );
+	void	challengeNewcomer( std::string const & );
+	void	challengeVersus( std::string const & );
+	void	challengeBattle( std::string const & );
+	void	challengeDance( std::string const & );
+	void	challengeIcuBucket( std::string const & );
+	void	challengeBoom( std::string const & );
+	
 private:
 
 	std::string				_name;
@@ -53,7 +54,7 @@ private:
 	static const unsigned	_meleeAttack;
 	static const unsigned	_rangedAttack;
 	static const unsigned	_armor;
-	static const unsigned	_specialAttackCost;
+	static const unsigned	_challengeCost;
 	
 };
 
